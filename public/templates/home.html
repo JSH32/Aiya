@@ -1,0 +1,24 @@
+{{define "home"}}
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        {{template "meta" .}}
+        <script src="/static/short.js"></script>
+    </head>
+
+    <body class="text-center">
+    <form class="form" onsubmit="return false;">
+        <img class="mb-4" src="/static/icon.png" alt="" width="250" height="250">
+        <h1 class="h3 mb-3 font-weight-normal">URL Shortener</h1>
+        <p>Links generated: <span id="count">{{.}}</span></p>
+        <input style="margin-bottom: 20px; text-align: center;" class="form-control" id="linkarea" placeholder="Enter link">
+
+        <button style="margin-bottom: -30px;" class="btn btn-lg btn-primary btn-block" onclick="shorten()">Shorten</button>
+
+        <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+    </form>
+    </body>
+
+    </html>
+{{end}}
